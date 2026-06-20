@@ -1,0 +1,25 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Generated / cached data — NOT committed. Regenerate with `make data`.
+data/raw/
+data/processed/
+# osmnx's Overpass HTTP cache, written to repo root
+cache/
+# ...but keep the directories present so the pipeline can write into them.
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# The seed table IS committed — it is the critical path. Do not ignore it.
+!data/seed/
+!data/seed/buildings_construction_years.csv
+
+# Node / web
+web/node_modules/
+web/dist/
+
+# OS
+.DS_Store
